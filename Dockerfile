@@ -1,6 +1,6 @@
-FROM rust:latest
+FROM solanalabs/rust:1.66.0
 
-RUN apt-get update && apt-get install -qy clang libudev-dev nodejs npm tmux vim neovim git netcat zsh
+RUN apt-get update && apt-get install -qy clang libudev-dev tmux vim git netcat zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 RUN rustup component add rustfmt
